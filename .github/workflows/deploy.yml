@@ -43,9 +43,10 @@ jobs:
           set -e
           cd "$APP_DIR"
 
-          # Crear venv si no existe
-          if [ ! -d "venv" ]; then
-            python3 -m venv venv
+          # Crear o recrear venv si no funciona pip
+          if [ ! -f "venv/bin/pip" ] || ! venv/bin/pip --version &>/dev/null; then
+            echo "Creando venv limpio..."
+            python3 -m venv --clear venv
           fi
 
           # Instalar/actualizar dependencias
