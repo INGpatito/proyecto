@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estacionamiento Papoys</title>
+    <style>
+        body { background-color: #40E0D0; font-family: sans-serif; text-align: center; }
+        .tabla { background: white; padding: 20px; border-radius: 15px; display: inline-block; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Estacionamiento</h1>
+    <div class="tabla">
+        <h2>Usuarios en la Base de Datos:</h2>
+        <ul>
+            {% for u in usuarios %}
+            <li><strong>{{ u[0] }}</strong></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

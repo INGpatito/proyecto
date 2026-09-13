@@ -1,0 +1,4 @@
+# Dependencias del proyecto Estacionamiento
+# Instalar con: pip install -r requirements.txt
+flask
+mysql-connector-python
