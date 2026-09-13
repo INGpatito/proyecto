@@ -20,16 +20,22 @@ jobs:
         run: |
           set -e
 
-          # Si no existe el repo clonado, clonarlo
-          if [ ! -d "$APP_DIR/.git" ]; then
+          # Si ya es un repo git, solo actualizar
+          if [ -d "$APP_DIR/.git" ]; then
+            cd "$APP_DIR"
+            git fetch origin main
+            git reset --hard origin/main
+          else
+            # Si el directorio existe pero no es git, inicializar
             mkdir -p "$APP_DIR"
-            git clone "https://github.com/${{ github.repository }}.git" "$APP_DIR"
+            cd "$APP_DIR"
+            git init
+            git remote add origin "https://github.com/${{ github.repository }}.git" 2>/dev/null || git remote set-url origin "https://github.com/${{ github.repository }}.git"
+            git fetch origin main
+            git reset --hard origin/main
           fi
 
-          # Actualizar al último commit de main
-          cd "$APP_DIR"
-          git fetch origin main
-          git reset --hard origin/main
+          echo "✅ Código sincronizado: $(git log --oneline -1)"
 
       - name: Install dependencies in venv
         shell: bash
