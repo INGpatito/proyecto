@@ -1,4 +1,4 @@
-# Proyecto - Sistema de Estacionamiento Papoys
+# Proyecto (#)
 
 > Desplegado automáticamente en Orange Pi 4 Pro via GitHub Actions
 
