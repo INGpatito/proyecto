@@ -1,23 +1,8 @@
-# Entorno virtual
-venv/
-
-# Variables de entorno
-config/.env
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-
-# Logs
-logs/*.log
-
-# IDE
-.vscode/
-.idea/
-
-# OS
+# Sistema operativo
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Logs y temporales
+*.log
+*.tmp

@@ -1,21 +1,18 @@
-# Proyecto (#)
+# Taco 3D - Experiencia Interactiva
 
-> Desplegado automáticamente en Orange Pi 4 Pro via GitHub Actions
+Proyecto web interactivo desarrollado con Three.js que presenta un modelo 3D con rotacion sincronizada al scroll y controles de arrastre para raton y pantallas tactiles.
 
-## Stack
-- **Backend:** Python 3.11 + Flask
-- **Base de datos:** MySQL
-- **Deploy:** GitHub Actions → Self-hosted runner → Orange Pi 4 Pro
+## Estructura del Proyecto
 
-## Desarrollo local
+- assets/: Recursos del modelo 3D en formato GLB binario.
+- css/: Estilos visuales y reglas de diseno responsivo.
+- html/: Estructura semantica principal del documento.
+- js/: Modulos independientes de JavaScript (estado, escena, controles, cargador y logica principal).
+
+## Ejecucion Local
+
+Puedes abrir directamente el archivo html/index.html en cualquier navegador web o iniciar un servidor HTTP local:
+
 ```bash
-git clone https://github.com/INGpatito/proyecto.git
-cd proyecto
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
+python3 -m http.server 8080
 ```
-
-## Deploy
-Cada push a `main` se despliega automáticamente en la Orange Pi.
