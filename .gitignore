@@ -6,3 +6,7 @@ desktop.ini
 # Logs y temporales
 *.log
 *.tmp
+
+# Python
+venv/
+__pycache__/
