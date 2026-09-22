@@ -1,0 +1,74 @@
+/* Configuración básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #c6d4e2;
+  color: #1e293b;
+}
+
+/* barra */
+.barra {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; color: #10b981; }
+.barra { text-decoration: none; color: #64748b; margin-left: 1rem; }
+
+/* buscador */
+.pregunta { max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center; }
+.partsuperior { margin-bottom: 2rem; }
+.partsuperior h1 { margin-bottom: 0.5rem; }
+
+.buscador { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+.buscador input { padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; width: 60%; }
+.buscador button { padding: 0.6rem 1.2rem; background: #0f172a; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+
+.mensajebuscador { margin-top: 0.5rem; font-weight: bold; color: #10b981; min-height: 24px; }
+
+/* color cambide pagi */
+.ordenabotes { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.individualbote {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 150px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.individualbote.dimmed { opacity: 0.2; }
+.individualbote.highlight { border-color: #10b981; transform: scale(1.05); }
+
+.badge { display: block; font-size: 0.8rem; padding: 0.2rem; border-radius: 4px; margin: 0.5rem 0; }
+.verde { background: #d1fae5; color: #065f46; }
+.azul { background: #dbeafe; color: #1e40af; }
+.gris { background: #f1f5f9; color: #475569; }
+.rojo { background: #fee2e2; color: #991b1b; }
+.naranja { background: #ffedd5; color: #9a3412; }
+
+.individualbote button { background: none; border: none; color: #64748b; text-decoration: underline; cursor: pointer; font-size: 0.8rem; }
+
+/* Elemento Flotante para Animación */
+.animacionrecibidor {
+  position: absolute;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+

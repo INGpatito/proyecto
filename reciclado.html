@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECICLADORA EL "KOREANO" - Boceto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="barra">
+  <div class="logo">RECICLADORA EL "KOREANO"</div>
+  <nav>
+    <a href="reciclado.html" class="regresar">Inicio</a>
+    <!-- Enlace configurado para abrir acerca.html en una pestaña nueva -->
+    <a href="acerca.html" class="sabermas">Acerca de</a>
+  </nav>
+</header>
+
+  <main class="pregunta">
+    <section class="partsuperior">
+      <h1>¿Dónde va este residuo?</h1>
+      <p>Escribe tu residuo para clasificasrlo automáticamente.</p>
+      
+      <div class="buscador">
+        <input type="text" id="searchInput" placeholder="Ej: Plátano, Pila, Botella...">
+        <button id="searchBtn">Depositar</button>
+      </div>
+      <p id="mensajebuscador" class="status-msg"></p>
+    </section>
+
+    <!-- la cosita animado -->
+    <div id="flyingItem" class="animacionrecibidor"></div>
+
+<!-- cambio de pagina -->
+<section class="ordenabotes">
+  
+  <!-- Bote Orgánico -->
+  <div class="individualbote organico" data-type="organico">
+    <img src="sapling-svgrepo-com.svg" alt="Orgánico" style="width: 28px; height: 28px;">
+    <h3>Orgánico</h3>
+    <span class="badge verde">Verde</span>
+    <a href="organico/organico.html" class="sabermas">Saber más</a>
+  </div>
+
+  <!-- Bote Reciclable -->
+  <div class="individualbote reciclable" data-type="reciclable">
+    <img src="recycling-svgrepo-com.svg" alt="Reciclable" style="width: 28px; height: 28px;">
+    <h3>Reciclable</h3>
+    <span class="badge azul">Azul</span>
+    <a href="reciclable/reciclable.html" class="sabermas">Saber más</a>
+  </div>
+
+  <!-- Bote No Reciclable -->
+  <div class="individualbote no-reciclable" data-type="no-reciclable">
+    <img src="clean-emissions-svgrepo-com.svg" alt="No Reciclable" style="width: 28px; height: 28px;">
+    <h3>No Reciclable</h3>
+    <span class="badge gris">Gris</span>
+    <a href="no reciclable/noreciclable.html" class="sabermas">Saber más</a>
+  </div>
+
+  <!-- Bote Peligroso -->
+  <div class="individualbote peligroso" data-type="peligroso">
+    <img src="socket-svgrepo-com.svg" alt="Peligroso" style="width: 28px; height: 28px;">
+    <h3>Peligroso</h3>
+    <span class="badge rojo">Rojo</span>
+    <a href="peligroso/peligroso.html" class="sabermas">Saber más</a>
+  </div>
+
+  <!-- Bote Especial -->
+  <div class="individualbote especial" data-type="especial">
+    <img src="sapling-svgrepo-com.svg" alt="Especial" style="width: 28px; height: 28px;">
+    <h3>Especial</h3>
+    <span class="badge naranja">Naranja</span>
+    <a href="especial/especial.html" class="sabermas">Saber más</a>
+  </div>
+
+</section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
