@@ -10,3 +10,7 @@ desktop.ini
 # Python
 venv/
 __pycache__/
+
+# IDEs
+.idea/
+.vscode/
