@@ -4,10 +4,10 @@ include("conexion.php");
 header("Content-Type: application/json");
 
 $datos = json_decode(file_get_contents("php://input"), true);
-$usuario = $datos["usuario"] ?? ""; //datos del usuario
-$contrasena = $datos["contrasena"] ?? ""; /contrasena del usuario
+$usuario = $datos["usuario"] ?? ""; // datos del usuario
+$contrasena = $datos["contrasena"] ?? ""; // contrasena del usuario
 
-if (empty($usuario) || empty($contrasena)) { //si el usuario no esta registrado entonces
+if (empty($usuario) || empty($contrasena)) { // si el usuario no esta registrado entonces
     http_response_code(400);
     echo json_encode(["error" => "Completa todos los campos"]);
     exit();

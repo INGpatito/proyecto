@@ -4,8 +4,8 @@ include("conexion.php");
 header("Content-Type: application/json");
 
 $datos = json_decode(file_get_contents("php://input"), true);
-$usuario = $datos["usuario"] ?? ""; //registrar usuario
-$contrasena = $datos["contrasena"] ?? ""; registrar contrasena
+$usuario = $datos["usuario"] ?? ""; // registrar usuario
+$contrasena = $datos["contrasena"] ?? ""; // registrar contrasena
 
 if (empty($usuario) || empty($contrasena)) {
     http_response_code(400);
@@ -14,7 +14,7 @@ if (empty($usuario) || empty($contrasena)) {
 }
 
 // Guardar usuario en la base de datos
-$consulta = $conexion->prepare("INSERT INTO usuarios (nombre, contrasena) VALUES (?, ?)"); // ver porque no funciona
+$consulta = $conexion->prepare("INSERT INTO usuarios (nombre, contrasena) VALUES (?, ?)");
 $consulta->bind_param("ss", $usuario, $contrasena);
 
 if ($consulta->execute()) {
