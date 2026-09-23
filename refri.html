@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Refri - CERO DESPERDICIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="barra">
+    <div class="logo">CERO DESPERDICIO</div>
+    <nav>
+      <a href="principal.html">← Volver </a>
+    </nav>
+  </header>
+
+  <main class="pregunta">
+    <section class="partsuperior">
+      <h1>Inventario de tu Refrigerador</h1>
+      <p>Gestiona tus alimentos, consulta recetas de aprovechamiento o pónlos en intercambio vecinal.</p>
+    </section>
+
+    <!-- clase pra fondos y listas -->
+    <section class="ordenabotes" id="listaAlimentos">
+      
+      <!-- alimento uno -->
+      <div class="individualbote" style="width: 260px;">
+        <span class="fondos naranja">Por caducar (2 días)</span>
+        <span class="fondos rojo">Sin Intercambio</span>
+        <h3>Leche entera</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0.4rem 0;"> Lácteos</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.8rem;">
+          <button type="button"> Soluciones</button>
+          <button type="button" style="color: #10b981; font-weight: bold;"> Consumido</button>
+          <button type="button"> Publicar Intercambio</button>
+          <button type="button" style="color: #1e40af;"> Ya se intercambió</button>
+          <button type="button" style="color: #991b1b;"> No se aprovechó</button>  
+        </div>
+      </div>
+
+      <!-- alimento dos -->
+      <div class="individualbote" style="width: 260px;">
+        <span class="fondos rojo">Por caducar (1 día)</span>
+        <span class="fondos azul">En Intercambio</span>
+        <h3>Jitomates</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0.4rem 0;"> Frutas/Verduras</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.8rem;">
+          <button type="button"> Soluciones</button>
+          <button type="button" style="color: #10b981; font-weight: bold;"> Consumido</button>
+          <button type="button"> Publicar Intercambio</button>
+          <button type="button" style="color: #1e40af;"> Ya se intercambió</button>
+          <button type="button" style="color: #991b1b;"> No se aprovechó</button>
+        </div>
+      </div>
+
+      <!-- alimento tres-->
+
+      <div class="individualbote" style="width: 260px;">
+        <span class="fondos rojo">Por caducar (1 día)</span>
+        <span class="fondos azul">En Intercambio</span>
+        <h3>Jitomates</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0.4rem 0;"> Frutas/Verduras</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.8rem;">
+          <button type="button"> Soluciones</button>
+          <button type="button" style="color: #10b981; font-weight: bold;"> Consumido</button>
+          <button type="button"> Publicar Intercambio</button>
+          <button type="button" style="color: #1e40af;"> Ya se intercambió</button>
+          <button type="button" style="color: #991b1b;"> No se aprovechó</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

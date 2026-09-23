@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;|
   font-family: sans-serif;
 }
 
@@ -35,7 +35,12 @@ body {
 .mensajebuscador { margin-top: 0.5rem; font-weight: bold; color: #10b981; min-height: 24px; }
 
 /* color cambide pagi */
-.ordenabotes { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.ordenabotes { 
+  display: flex; 
+  gap: 1rem; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
 
 .individualbote {
   background: #fff;
@@ -50,14 +55,20 @@ body {
 .individualbote.dimmed { opacity: 0.2; }
 .individualbote.highlight { border-color: #10b981; transform: scale(1.05); }
 
-.badge { display: block; font-size: 0.8rem; padding: 0.2rem; border-radius: 4px; margin: 0.5rem 0; }
+.fondos { display: block; font-size: 0.8rem; padding: 0.2rem; border-radius: 4px; margin: 0.5rem 0; }
 .verde { background: #d1fae5; color: #065f46; }
 .azul { background: #dbeafe; color: #1e40af; }
 .gris { background: #f1f5f9; color: #475569; }
 .rojo { background: #fee2e2; color: #991b1b; }
 .naranja { background: #ffedd5; color: #9a3412; }
 
-.individualbote button { background: none; border: none; color: #64748b; text-decoration: underline; cursor: pointer; font-size: 0.8rem; }
+.individualbote button { 
+  background: none; 
+  border: none; color: #64748b; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  font-size: 0.8rem; 
+}
 
 /* Elemento Flotante para Animación */
 .animacionrecibidor {
@@ -72,3 +83,64 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+/* 1. Centra la caja en la pantalla Y el texto dentro */
+.contenido, .contexto, .pregunta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centra los bloques verticalmente alineados */
+  text-align: center;        /* Centra todo el texto */
+  margin: 2rem auto;         /* Centra la tarjeta en la pantalla */
+  max-width: 700px;         /* Ajusta el ancho para que se vea ordenado */
+  width: 90%;
+}
+
+/* 2. Para que los números o puntos de la lista se centren con el texto */
+.lista {
+  list-style-position: inside; /* Mete el número/punto dentro del bloque para poder centrarlo */
+  padding: 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.lista li {
+  margin-bottom: 1rem;       /* Espacio entre cada punto */
+}
+
+/* Tarjeta principal centrada y bien distribuida */
+.contexto {
+  background: #ffffff;
+  width: 90%;
+  max-width: 700px;        /* Le da un ancho amplio para que no se aplaste el texto */
+  margin: 2rem auto;       /* Centra la tarjeta horizontalmente en la pantalla */
+  padding: 2rem 2.5rem;    /* Relleno interno para que respire el contenido */
+  border-radius: 12px;     /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave para darle estilo */
+}
+
+body {
+  position: relative;
+  color: #1e293b;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Capa de fondo con imagen desenfocada */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Envía la imagen al fondo detrás de todo el contenido */
+  
+  /* Imagen con filtro oscuro */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Img/fondo.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Aplicación del desenfoque */
+  filter: blur(8px);       /* Ajusta los píxeles para más o menos desenfoque */
+  transform: scale(1.05);  /* Amplía ligeramente la capa para eliminar bordes blancos difuminados */
+}
