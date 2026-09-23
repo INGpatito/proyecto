@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CERO DESPERDICIO"</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header class="barra">
+    <div class="logo">CERO DESPERDICIO</div>
+    <nav>
+      <a href="../index.html" class="regresar">&larr; Volver al Inicio</a>
+    </nav>
+  </header>
+
+  <!-- Tarjeta de Login y Registro -->
+  <main class="login-container">
+    <div class="login-card">
+
+      <!-- Pestanas -->
+      <div class="tabs">
+        <button type="button" class="tab-btn active" id="tabLogin" onclick="cambiarTab('login')">Iniciar Sesion</button>
+        <button type="button" class="tab-btn" id="tabRegistro" onclick="cambiarTab('registro')">Registrarse</button>
+      </div>
+
+      <div class="login-header">
+        <h2 id="titulo">Iniciar Sesion</h2>
+
+      </div>
+
+      <div id="mensaje" class="status-msg"></div>
+
+
+      <form id="formLogin" class="login-form">
+        <div class="form-group">
+          <label for="loginUser">Usuario</label>
+          <input type="text" id="loginUser" required placeholder="Ingresa tu usuario">
+        </div>
+        <div class="form-group">
+          <label for="loginPass">Contrasena</label>
+          <input type="password" id="loginPass" required placeholder="Ingresa tu contrasena">
+        </div>
+        <button type="submit" class="btn-submit">Ingresar</button>
+      </form>
+
+           <!-- seccion de la creacion del usuario osea el esqueleto-->
+      <form id="formRegistro" class="login-form" style="display: none;">
+        <div class="form-group">
+          <label for="regUser">Usuario</label>
+          <input type="text" id="regUser" required placeholder="Crea un usuario">
+        </div>
+        <div class="form-group">
+          <label for="regPass">Contrasena</label> <!-- pongan la ene que no la tengo -->
+          <input type="password" id="regPass" required placeholder="Crea una contrasena">
+        </div>
+        <button type="submit" class="btn-submit">Guardar en Base de Datos</button>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
