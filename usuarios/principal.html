@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COME BIEN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="barra">
+    <div class="logo">COME BIEN</div>
+    <nav>
+      <a href="acerca.html" target="_blank">Acerca de</a>
+    </nav>
+  </header>
+
+  <main class="pregunta">
+  
+    <section class="partsuperior">
+      <h1>Impacto Ambiental acumulado</h1>
+    </section>
+
+    <!-- Registrar Nuevo Alimento -->
+    <section class="partsuperior">
+      <h2>Registrar nuevo alimento</h2>
+    </section>
+    <section>
+      <p>Agrega los productos de tu refri antes de que caduquen.</p>
+
+      <form action="guardar.php" method="POST" class="buscador" style="flex-direction: column; align-items: center; gap: 0.8rem; margin-top: 1rem;">
+        
+        <input type="text" name="producto" placeholder="Ej: Leche, Jitomates, Pan" required style="width: 80%; max-width: 400px;">
+        
+        <input type="number" name="dias_restantes" placeholder="Días para caducar (Ej: 2)" min="0" required style="width: 80%; max-width: 400px;">
+        
+        
+        <select name="categoria" style="padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; width: 80%; max-width: 400px;">
+          <option value="Lácteos">Lácteos</option>
+          <option value="Frutas/Verduras">Frutas / Verduras</option>
+          <option value="Panadería">Panadería</option>
+          <option value="Carnes">Carnes</option>
+          <option value="Otros">Otros</option>
+        </select>
+
+        <button type="submit" style="width: 80%; max-width: 400px; background: #10b981;">Agregar al Refri</button>
+      </form>
+      <p class="mensajebuscador" id="statusMessage"></p>
+    </section>
+
+    <!-- Ver  refril-->
+    <section class="partsuperior" style="background: #fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+      <h2>Alimentos en tu refrigerador</h2>
+      <p>Consulta el estado de tus alimentos, recetas o publica en el muro de intercambio.</p>
+      <br>
+      <div class="buscador">
+        <a href="refri.html" style="text-decoration: none;">
+          <button type="button" style="padding: 0.8rem 2rem; font-weight: bold;">Ver mi refri &rarr;</button>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -45,7 +45,7 @@ document.getElementById('formLogin').addEventListener('submit', async (e) => {
     if (res.ok) {
       mensaje.className = 'status-msg success';
       mensaje.textContent = datos.message;
-      window.location.href = '../borrar.html';
+      window.location.href = '../usuarios/principal.html';
     } else {
       mensaje.className = 'status-msg error';
       mensaje.textContent = datos.error;
