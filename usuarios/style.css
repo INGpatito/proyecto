@@ -135,7 +135,7 @@ body::before {
   z-index: -1; /* Envía la imagen al fondo detrás de todo el contenido */
   
   /* Imagen con filtro oscuro */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fondo.avif');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
